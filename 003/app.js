@@ -162,4 +162,3 @@ animalColors.sort((a, b) => a - b);
 animalColors.sort((a, b) => b.name.localeCompare(a.name));
 
 console.log(animalColors);
-
