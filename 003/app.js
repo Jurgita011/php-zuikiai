@@ -38,10 +38,10 @@ function fun(bg = 'orange', fs = 30) { // => bg parameter
  console.log('%c END ', 'background:skyblue;color:white;');
 
  const moreFun = fun;
-// moreFun('pink', 5); // => 'pink' argument
-// moreFun('black', 50);
+ moreFun('pink', 5); // => 'pink' argument
+ moreFun('black', 50);
 
-// const how = fun();
+ const how = fun();
 // how();
 
 // declaration "fun2" is variable, function has no name
@@ -64,15 +64,15 @@ const fun5 = a => 'was ' + a;
 const what = fun5('fun');
 
 
-// console.log(what, fun5('cool'));
+ console.log(what, fun5('cool'));
 
 const calc = (what, a, b) => what(a, b); // what is callback
 
 const sum = (a, b) => a + b;
 const mult = (a, b) => a * b;
 
-// console.log('+', calc(sum, 5, 7));
-// console.log('*', calc(mult, 5, 7));
+ console.log('+', calc(sum, 5, 7));
+ console.log('*', calc(mult, 5, 7));
 
 
 const animals = [
@@ -91,13 +91,13 @@ const colors = [
 
 
 
-// for (let i = 0; i < animals.length; i++) {
-//     console.log(`%c ${animals[i]} `, 'background:brown;color:white;');
-// }
+ for (let i = 0; i < animals.length; i++) {
+     console.log(`%c ${animals[i]} `, 'background:brown;color:white;');
+ }
 
-// for (let i = 0; i < colors.length; i++) {
-//     console.log('%c  ', `background:${colors[i]};`);
-// }
+ for (let i = 0; i < colors.length; i++) {   
+      console.log('%c  ', `background:${colors[i]};`);
+ }
 
 const arrayGo = (array, fun) => {
     for (let i = 0; i < array.length; i++) {
@@ -110,13 +110,13 @@ const print1 = p => console.log(`%c ${p} `, 'background:brown;color:white;');
 const print2 = p => console.log('%c  ', `background:${p};`);
 
 
-// arrayGo(animals, print1);
-// arrayGo(colors, print2);
-// arrayGo(colors, print1);
+arrayGo(animals, print1);
+ arrayGo(colors, print2);
+ arrayGo(colors, print1);
 
-// animals.forEach(animal => print1(animal));
+animals.forEach(animal => print1(animal));
 
-// colors.forEach((_, i) => console.log(i));
+ colors.forEach((_, i) => console.log(i));
 
 const animals2 = [];
 
@@ -151,11 +151,11 @@ const wolfFind = animalColors.find(a => a.name == 'wolf');
 const doubleAnimal = animalColors.filter(a => a.color == 'crimson').map(a => ({...a, color: 'black' }));
 
 
-// animalColors.sort((a, b) => {
-//     if (a.size < b.size) return -1;
-//     if (a.size > b.size) return 1;
-//     return 0;
-// });
+ animalColors.sort((a, b) => {
+     if (a.size < b.size) return -1;
+    if (a.size > b.size) return 1;
+     return 0;
+ });
 
 animalColors.sort((a, b) => a - b);
 
